@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProductsPage = () => {
     const products = [
         { id: 1, name: "product 1" },
@@ -13,7 +15,12 @@ const ProductsPage = () => {
                 {
                     products.map(product => (
                         <div key={product.id}>
-                            {product.name}
+                            <Link
+                                href={`Products/${product.id}`}
+                                replace={parseInt(product.id) === 3}
+                            >
+                                {product.name}
+                            </Link>
                         </div>
                     ))
                 }
