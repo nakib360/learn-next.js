@@ -1,5 +1,8 @@
 export const metadata = {
-    title: "Learn Next.js",
+    title: {
+        default: "Learn Next.js",
+        template: "%s | Next.js"
+    },
     description: "learning next.js is great."
 }
 

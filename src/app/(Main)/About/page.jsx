@@ -1,5 +1,8 @@
 export const metadata = {
-  title: "About Page"
+  title: {
+    absolute: "About Page"
+  },
+
 }
 
 const AboutPage = () => {
