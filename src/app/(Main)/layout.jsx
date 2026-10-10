@@ -1,3 +1,5 @@
+import "@/app/globals.css";
+
 export const metadata = {
     title: {
         default: "Learn Next.js",
@@ -7,6 +9,13 @@ export const metadata = {
 }
 
 const RootLayout = ({ children }) => {
+    const Nav = [
+        {id: 1, path: "About"},
+        {id: 1, path: "About"},
+        {id: 1, path: "About"},
+        {id: 1, path: "About"},
+        {id: 1, path: "About"},
+    ]
     return (
         <html>
             <body>
