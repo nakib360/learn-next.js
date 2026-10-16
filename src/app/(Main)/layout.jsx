@@ -1,4 +1,6 @@
 import "@/app/globals.css";
+import HeaderNav from "../Client_Components/HeaderNav";
+import { Space_Grotesk } from "next/font/google"
 
 export const metadata = {
     title: {
@@ -8,19 +10,19 @@ export const metadata = {
     description: "learning next.js is great."
 }
 
+const spaceGrotest = Space_Grotesk({
+    weight: "500",
+    subsets: ["latin"]
+})
+
 const RootLayout = ({ children }) => {
-    const Nav = [
-        {id: 1, path: "About"},
-        {id: 1, path: "About"},
-        {id: 1, path: "About"},
-        {id: 1, path: "About"},
-        {id: 1, path: "About"},
-    ]
+
     return (
         <html>
-            <body>
+            <body className={`${spaceGrotest.className}`}>
                 <header className="bg-green-500 p-20">
                     <p>Header</p>
+                    <HeaderNav />
                 </header>
                 {children}
                 <footer className="bg-green-500 p-20">
